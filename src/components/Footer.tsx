@@ -19,16 +19,16 @@ const Footer: React.FC = () => {
               kitchen treasures. Creating magical moments one tiny treasure at a time.
             </p>
             <div className="social-links">
-              <a href="#" className="social-link" aria-label="Instagram">
+              <a href="https://instagram.com/mechheaven" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 <FiInstagram />
               </a>
-              <a href="#" className="social-link" aria-label="Twitter">
+              <a href="https://twitter.com/mechheaven" className="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
                 <FiTwitter />
               </a>
-              <a href="#" className="social-link" aria-label="Facebook">
+              <a href="https://facebook.com/mechheaven" className="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <FiFacebook />
               </a>
-              <a href="#" className="social-link" aria-label="LinkedIn">
+              <a href="https://linkedin.com/company/mechheaven" className="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                 <FiLinkedin />
               </a>
             </div>

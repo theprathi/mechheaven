@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiUser, FiLogOut } from 'react-icons/fi';
+import { FiLogOut } from 'react-icons/fi';
 import { FaGoogle } from 'react-icons/fa';
 import { useAuth } from '../context/AuthContext';
 import './GoogleLogin.css';

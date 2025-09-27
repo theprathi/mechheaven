@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiShoppingCart, FiSearch, FiUser, FiLogOut } from 'react-icons/fi';
+import { FiShoppingCart, FiSearch, FiLogOut } from 'react-icons/fi';
 import { useAuth } from '../context/AuthContext';
 import Dashboard from './Dashboard';
 import './DashboardLayout.css';

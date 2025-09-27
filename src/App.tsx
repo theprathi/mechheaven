@@ -18,7 +18,7 @@ const LoadingScreen: React.FC = () => {
 };
 
 const AppContent: React.FC = () => {
-  const { currentUser, isAuthenticated, hasCompletedProfile, refreshUserProfile, loading } = useAuth();
+  const { currentUser, isAuthenticated, hasCompletedProfile, loading } = useAuth();
   // const [showMobileModal, setShowMobileModal] = useState(false); // Mobile number now optional
   const [postLoginLoading, setPostLoginLoading] = useState(false);
 
