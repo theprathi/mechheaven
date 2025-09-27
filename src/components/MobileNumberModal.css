@@ -1,0 +1,233 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: linear-gradient(135deg, var(--secondary-bg), var(--accent-bg));
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 450px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-avatar-large {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+.welcome-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin: 0;
+  background: linear-gradient(135deg, var(--magical-pink), var(--magical-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-section p {
+  color: var(--secondary-text);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.mobile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  font-size: 1rem;
+}
+
+.label-icon {
+  color: var(--accent-color);
+  font-size: 1.125rem;
+}
+
+.phone-input-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.phone-input-container:focus-within {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+.country-code {
+  padding: 1rem 0.75rem;
+  background-color: var(--accent-bg);
+  color: var(--primary-text);
+  font-weight: 600;
+  border-right: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  background: transparent;
+  color: var(--primary-text);
+  font-size: 1rem;
+  outline: none;
+}
+
+.phone-input::placeholder {
+  color: var(--secondary-text);
+}
+
+.phone-input.error {
+  color: #ef4444;
+}
+
+.phone-input-container:has(.phone-input.error) {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--accent-color), var(--hover-color));
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  min-height: 3rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-icon {
+  font-size: 1.125rem;
+}
+
+.loading-spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.privacy-note {
+  text-align: center;
+  color: var(--secondary-text);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--accent-bg);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 1.5rem;
+    margin: 1rem;
+    max-width: none;
+  }
+
+  .user-avatar-large {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .submit-btn {
+    min-width: 100%;
+    padding: 1rem;
+  }
+}
